@@ -22,6 +22,10 @@ class Transfer
     #else 
       #rejected 
     if valid? && sender.balance > amount 
+      @status == "pending"
+      sender.balance -= amount 
+      receiver.balance += amount
+      @status = "complete"
       
     
       
