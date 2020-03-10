@@ -21,7 +21,7 @@ class Transfer
       #status is complete
     #else 
       #rejected 
-    if valid? && sender.amount
+    if valid? && sender.balance > amount 
       
     
       
